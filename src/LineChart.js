@@ -95,16 +95,15 @@ class LineChart extends Component {
 
   makeArea() {
     const { data } = this.props;
-    let pathD = 'M ' + this.getSvgX(data[0].x) + ' ' + this.getSvgY(data[0].y) + ' ';
+    let pathD = `M ${this.getSvgX(data[0].x)} ${this.getSvgY(data[0].y)}`;
     pathD += data.map((point, i) => {
-      return 'L ' + this.getSvgX(point.x) + ' ' + this.getSvgY(point.y) + ' ';
+      return `L ${this.getSvgX(point.x)} ${this.getSvgY(point.y)}`;
     }).join('');
 
     const x = this.getX();
     const y = this.getY();
 
-    pathD += 'L ' + this.getSvgX(x.max) + ' ' + this.getSvgY(y.min) + ' ' + 'L '
-     + this.getSvgX(x.min) + ' ' + this.getSvgY(y.min);
+    pathD += `L ${this.getSvgX(x.max)} ${this.getSvgY(y.min)} L ${this.getSvgX(x.min)} ${this.getSvgY(y.min)}`;
 
     return <path className='linechart_area' d={pathD} />
   }

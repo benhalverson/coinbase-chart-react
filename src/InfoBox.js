@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import moment from 'moment';
-
+import './infobox.css';
 class Infobox extends Component {
   constructor(props) {
     super(props);
@@ -42,17 +42,17 @@ class Infobox extends Component {
   render() {
     return(<div id="data-container">
       { this.state.currentPrice ? 
-        <div className='box'>
+        <div id='left' className='box'>
           <div className='heading'>{this.state.currentPrice.toLocaleString('us-EN', { style: 'currency', currency: 'USD'})}</div>
           <div className='subtext'>{'Updated ' + moment(this.state.updatedAt).fromNow()}</div>
         </div> : null }
       { this.state.monthChangeD ? 
-      <div className='box'>
+      <div id='middle' className='box'>
         <div className='heading'>{this.state.monthChangeD}</div>
         <div className='subtext'>Changed since last Month</div>
       </div> : null }
       { this.state.currentPrice ? 
-      <div className='box'>
+      <div id='right' className='box'>
         <div className='heading'>{this.state.currentPrice}</div>
         <div className='subtext'>Changed since last Month</div>
       </div> : null }

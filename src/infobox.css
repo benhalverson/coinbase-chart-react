@@ -1,0 +1,38 @@
+#data-cointainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+#left {
+  margin-left: 48px;
+}
+
+#middle {
+  padding: 0 48px;
+  border-left: 1px solid #dae1e9;
+  border-right: 1px solid #dae1e9;
+}
+
+#right {
+  margin-right: 48px;
+}
+
+
+
+.box {
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.heading {
+  font-size: 2.5em;
+  color: #2196F3;
+}
+
+.subtext {
+  color: #cccccc;
+}
