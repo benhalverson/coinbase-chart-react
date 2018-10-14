@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import './tooltip.css';
+
 class ToolTip extends Component {
   render() {
     const {hover, activePoint} = this.props;
