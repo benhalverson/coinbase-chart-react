@@ -1,38 +1,39 @@
-#data-cointainer {
+.infobox{
   width: 100%;
-  display: flex;
-  justify-content: center;
+  max-width: 900px;
 }
 
-#left {
-  margin-left: 48px;
-}
+
+/* #left {
+  padding: 0 35px;
+} */
 
 #middle {
-  padding: 0 48px;
-  border-left: 1px solid #dae1e9;
-  border-right: 1px solid #dae1e9;
+  padding: 0 35px;
+  border-left: .1rem solid #dae1e9;
+  border-right: .1rem solid #dae1e9;
 }
 
-#right {
-  margin-right: 48px;
-}
+/* #right {
+  padding: 0 35px;
+} */
 
 
 
 .box {
-  width: 250px;
+  width: 27.77%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 10px 0;
+  margin: 1rem 0;
 }
 
 .heading {
-  font-size: 2.5em;
+  font-size: 3.5rem;
   color: #2196F3;
 }
 
 .subtext {
+  font-size: 1.2rem;
   color: #cccccc;
 }
