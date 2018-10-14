@@ -19,3 +19,12 @@
   border-radius: 3px;
   padding: 0 10px;
 }
+
+.currencyBox {
+  text-align: center;
+  height: 50px;
+  display: grid;
+  grid-auto-flow: column;
+  grid-gap: 10px;
+  align-items: center;
+}

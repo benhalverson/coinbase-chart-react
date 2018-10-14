@@ -1,7 +1,19 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+
 import './linechart.css';
 
 class LineChart extends Component {
+
+  static propsTypes = {
+    currency: PropTypes.string
+  }
+
+  static defaultProps = {
+    currency: 'USD'
+  }
+
+
   constructor(props) {
     super(props);
     this.state = {
@@ -136,7 +148,7 @@ class LineChart extends Component {
         >
           {this.getY().max.toLocaleString('us-EN', {
             style: 'currency',
-            currency: 'USD'
+            currency: this.props.currency
           })}
         </text>
         <text
@@ -147,7 +159,7 @@ class LineChart extends Component {
         >
           {this.getY().min.toLocaleString('us-EN', {
             style: 'currency',
-            currency: 'USD'
+            currency: this.props.currency
           })}
         </text>
         {/* X AXIS LABELS */}

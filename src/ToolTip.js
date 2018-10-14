@@ -9,7 +9,7 @@ class ToolTip extends Component {
 
     let placementStyles = {};
     let width = 100;
-    placementStyles.width = width + 'px';
+    //placementStyles.width = width + 'px'; //let it be width based on content
     placementStyles.left = hover + svgLocation.left - (width/2);
 
     return (
