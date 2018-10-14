@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.2/workbox-sw.js");
 
 importScripts(
-  "/coinbase-chart-reac/precache-manifest.f9854802f46c1532d500fef4fddb4c42.js"
+  "/coinbase-chart-react/precache-manifest.51d315ebe1eae247a54bf3332ba1c695.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/coinbase-chart-reac/index.html", {
+workbox.routing.registerNavigationRoute("/coinbase-chart-react/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });
