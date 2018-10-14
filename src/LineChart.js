@@ -10,6 +10,7 @@ class LineChart extends Component {
     }
   }
 
+  // Get X & Y || Min & Max
   getX(){
     const { data } = this.props;
     return {
@@ -26,6 +27,7 @@ class LineChart extends Component {
     }
   }
 
+  // Get SVG coords
   getSvgX(x) {
     const {svgWidth, yLabelSize } = this.props;
     return yLabelSize + (x / this.getX().max *  (svgWidth - yLabelSize));
@@ -80,6 +82,7 @@ class LineChart extends Component {
     this.props.onChartHover(null, null);
   }
 
+  // Build SVG path
   makePath() {
     const { data, color } = this.props;
     let pathD = 'M ' + this.getSvgX(data[0].x) + ' ' + this.getSvgY(data[0].y) + ' ';
@@ -93,6 +96,7 @@ class LineChart extends Component {
     )
   }
 
+  // Build shaded area
   makeArea() {
     const { data } = this.props;
     let pathD = `M ${this.getSvgX(data[0].x)} ${this.getSvgY(data[0].y)}`;
@@ -160,7 +164,7 @@ class LineChart extends Component {
   makeActivePoint() {
     const {color, pointRadius} = this.props;
     return(
-      <circle 
+      <circle  
         className='linechart_point'
         style={{stroke: color}}
         r={pointRadius}
@@ -171,7 +175,7 @@ class LineChart extends Component {
   }
   render() {
     const {svgHeight, svgWidth } = this.props;
-    return(<svg width={svgWidth} hieght={svgHeight} viewBox={`0 0 ${svgWidth} ${svgHeight}`} className={'linechart'}
+    return(<svg width={svgWidth} height={svgHeight} viewBox={`0 0 ${svgWidth} ${svgHeight}`} className={'linechart'}
       onMouseLeave={ () => this.stopHover() }
       onMouseMove={ (e) => this.getCoords(e) }>
       <g>

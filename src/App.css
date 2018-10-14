@@ -1,3 +1,22 @@
 .popup {
   min-height: 50px;
 }
+
+.row {
+  display: flex;
+  justify-content: center;
+ /* align-items: center; /*here?*/
+}
+#data-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
+}
+
+.box > div:last-child {
+  background-color: rgba(235, 235, 235, .8);
+  border: 1px solid rgb(220, 220, 220);
+  border-radius: 3px;
+  padding: 0 10px;
+}

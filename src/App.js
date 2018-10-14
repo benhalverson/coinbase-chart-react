@@ -56,20 +56,27 @@ class App extends Component {
   }
   render() {
     return ( 
-    <div className = "App">
-      <div className="infobox">
-        { !this.state.fetchingData ?
-        <InfoBox data={this.state.data} />
-        : null  }
+    <div className = "container">
+      <div className="row">
+        <div className="infobox">
+          { !this.state.fetchingData ?
+          <InfoBox data={this.state.data} />
+          : null  }
+        </div>
       </div>
-      <div className="popup">
-          {this.state.hover ? <ToolTip hover={this.state.hover} activePoint={this.state.activePoint} /> : null}
+      <div className='row'>
+        <div className="popup">
+            {this.state.hover ? <ToolTip hover={this.state.hover} activePoint={this.state.activePoint} /> : null}
+        </div>      
       </div>
-      <div className="chart">
-          { !this.state.fetchingData ? 
-          <LineChart data={this.state.data} onChartHover={(a, b) => this.handleChartHover(a,b)}  /> : null
-        } 
+      <div className='row'>
+        <div className="chart">
+            { !this.state.fetchingData ? 
+            <LineChart data={this.state.data} onChartHover={(a, b) => this.handleChartHover(a,b)}  /> : null
+          } 
+        </div>
       </div>
+
      </div>);
   }
 }

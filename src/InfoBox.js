@@ -51,9 +51,9 @@ class Infobox extends Component {
         <div className='heading'>{this.state.monthChangeD}</div>
         <div className='subtext'>Changed since last Month</div>
       </div> : null }
-      { this.state.currentPrice ? 
+      { this.state.monthChangeP ? 
       <div id='right' className='box'>
-        <div className='heading'>{this.state.currentPrice}</div>
+        <div className='heading'>{this.state.monthChangeP}</div>
         <div className='subtext'>Changed since last Month</div>
       </div> : null }
 
