@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import moment from 'moment';
-import './infobox.css';
+import './infobox.scss';
 class Infobox extends Component {
   constructor(props) {
     super(props);
