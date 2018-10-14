@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import './linechart.css';
 
 class LineChart extends Component {
   constructor(props) {
