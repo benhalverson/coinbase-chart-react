@@ -63,7 +63,7 @@ class LineChart extends Component {
     let closestPoint = {};
     for (let i = 0, c = 500; i < svgData.length; i++) {
       if (Math.abs(svgData[i].svgX - this.state.hover) <= c) {
-        c = Math.abs((svgData[i].svgX = this.state.hover));
+        c = Math.abs((svgData[i].svgX - this.state.hover));
         closestPoint = svgData[i];
       }
     }
