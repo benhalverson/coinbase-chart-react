@@ -1,5 +1,5 @@
 .linechart {
-  padding: 8px;
+  padding: .8rem;
 }
 
 .linechart_path {
@@ -17,7 +17,7 @@
 }
 
 .linechart_area {
-  padding: 8px;
+  padding: .8rem;
   fill: rgb(0, 255, 81);
   stroke: none;
   opacity: .4;
