@@ -1,0 +1,11 @@
+version: '3.2'
+services:
+  app:
+    container_name: coinbase-chart-react
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - '/usr/src/app/node_modules'
+    ports:
+      - '3000:3000'
