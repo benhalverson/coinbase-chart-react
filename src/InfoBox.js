@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import moment from 'moment';
 import './styles/scss/infobox.scss';
+
 class Infobox extends Component {
   constructor(props) {
     super(props);
@@ -19,14 +20,9 @@ class Infobox extends Component {
       fetch(url)
         .then(res => res.json())
         .then((coinData) => {
-          // console.log(`coindata`, coinData.bpi);
           const price = coinData.bpi.USD.rate_float;
-          // console.log('price', price);
-          // console.log('data', data[0]);
           const change = price - data[0].y;
-          // console.log('change', change);
           const changeP = (price - data[0].y) / data[0].y * 100;
-          // console.log('changed price', changeP);
           this.setState({
             currentPrice: coinData.bpi.USD.rate_float,
             monthChangeD: change.toLocaleString('us-EN', { style: 'currency', currency: 'USD'}),

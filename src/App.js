@@ -1,6 +1,7 @@
 import React, {
   Component
 } from 'react';
+
 import './styles/scss/App.scss';
 import moment from 'moment';
 import LineChart from './LineChart';
