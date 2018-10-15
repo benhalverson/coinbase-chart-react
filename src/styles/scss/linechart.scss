@@ -1,0 +1,36 @@
+@import '_variables.scss';
+
+.linechart {
+  padding: .8rem;
+
+  &__path {
+    stroke-width: 3;
+    fill: none;
+  }
+
+  &__axis {
+    stroke: $red;
+  }
+
+  &__point {
+    fill: $white;
+    stroke-width: 2;
+  }
+
+  &__area {
+    padding: .8rem;
+    fill: $light_green;
+    stroke: none;
+    opacity: .4;
+  }
+
+  &__label {
+    fill: $black;
+    font-weight: $fwBold;
+  }
+}
+
+.hoverline {
+  stroke: $grey;
+  stroke-width: 1;
+}

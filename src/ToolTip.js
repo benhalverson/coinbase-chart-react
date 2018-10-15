@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import './tooltip.scss';
+import './styles/scss/tooltip.scss';
 
 class ToolTip extends Component {
   render() {
@@ -15,7 +15,7 @@ class ToolTip extends Component {
     return (
       <div className='hover' style={ placementStyles }>
         <div className='date'>{ activePoint.d }</div>
-        <div className='price'>{ activePoint.p }</div>
+        <div className='hover__price'>{ activePoint.p }</div>
       </div>
     )
   }
