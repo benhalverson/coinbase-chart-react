@@ -1,7 +1,7 @@
 import React, {
   Component
 } from 'react';
-import './App.css';
+import './App.scss';
 import moment from 'moment';
 import LineChart from './LineChart';
 import ToolTip from './ToolTip';
