@@ -1,7 +1,7 @@
 import React, {
   Component
 } from 'react';
-import './App.css';
+import './styles/scss/App.scss';
 import moment from 'moment';
 import LineChart from './LineChart';
 import ToolTip from './ToolTip';
@@ -55,7 +55,7 @@ class App extends Component {
     getData();
   }
   render() {
-    return ( 
+    return (
     <div className = "container">
       <div className="row">
         <div className="infobox">
@@ -67,13 +67,13 @@ class App extends Component {
       <div className='row'>
         <div className="popup">
             {this.state.hover ? <ToolTip hover={this.state.hover} activePoint={this.state.activePoint} /> : null}
-        </div>      
+        </div>
       </div>
       <div className='row'>
         <div className="chart">
-            { !this.state.fetchingData ? 
+            { !this.state.fetchingData ?
             <LineChart data={this.state.data} onChartHover={(a, b) => this.handleChartHover(a,b)}  /> : null
-          } 
+          }
         </div>
       </div>
 

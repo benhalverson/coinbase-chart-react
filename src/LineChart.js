@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './linechart.css';
+import './styles/scss/linechart.scss';
 
 class LineChart extends Component {
   constructor(props) {
@@ -100,7 +100,7 @@ class LineChart extends Component {
       .join('');
 
     return (
-      <path className="linechart_path" d={pathD} style={{ stroke: color }} />
+      <path className="linechart__path" d={pathD} style={{ stroke: color }} />
     );
   }
 
@@ -121,14 +121,14 @@ class LineChart extends Component {
       x.min
     )} ${this.getSvgY(y.min)}`;
 
-    return <path className="linechart_area" d={pathD} />;
+    return <path className="linechart__area" d={pathD} />;
   }
 
   makeLabels() {
     const { svgHeight, svgWidth, xLabelSize, yLabelSize } = this.props;
     const padding = 5;
     return (
-      <g className="linechart_label">
+      <g className="linechart__label">
         {/* Y AXIS LABELS */}
         <text
           transform={`translate(${yLabelSize / 2}, 20)`}
@@ -173,7 +173,7 @@ class LineChart extends Component {
     const y = this.getY();
 
     return (
-      <g className="linechart_axis">
+      <g className="linechart__axis">
         <line
           x1={this.getSvgX(x.min) - yLabelSize}
           y1={this.getSvgY(y.min)}
@@ -209,7 +209,7 @@ class LineChart extends Component {
     const { color, pointRadius } = this.props;
     return (
       <circle
-        className="linechart_point"
+        className="linechart__point"
         style={{ stroke: color }}
         r={pointRadius}
         cx={this.state.activePoint.svgX}

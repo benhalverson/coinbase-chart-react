@@ -1,0 +1,43 @@
+.popup {
+  min-height: 5rem;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+}
+
+#data-container {
+  background-image: linear-gradient(#777777 , #666666, #444444, #444444, #333333);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-content: center;
+  border: .2rem solid #666666;
+  border-radius: .5rem;
+}
+
+.box {
+  & > div {
+    &:first-child {
+      -webkit-text-stroke: .5px black;
+    }
+
+    &:last-child {
+      width: 100%;
+      background-color: rgba(235, 235, 235, .8);
+      border: 1px solid rgb(190, 190, 190);
+      border-radius: .3rem;
+      padding: .5rem 1rem;
+      color: ghostwhite;
+      box-shadow: inset 0 .2rem 0 rgb(0, 175, 175), 0 .2rem .5rem #000;
+      text-align: center;
+      transition: all 1.5s ease-in;
+
+      &:hover {
+        background-color: rgb(0, 175, 175);
+        box-shadow: inset 0 .2rem 0 rgb(0, 96, 96), 0 .2rem .5rem #000;
+      }
+    }
+ }
+}
