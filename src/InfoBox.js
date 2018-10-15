@@ -1,6 +1,9 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'; 
+import ReactDOM from 'react-dom';
 import moment from 'moment';
+
 import './infobox.css';
+
 class Infobox extends Component {
   constructor(props) {
     super(props);
@@ -8,14 +11,17 @@ class Infobox extends Component {
       currentPrice: null,
       monthChangeD: null,
       monthChangeP: null,
-      updatedAt: null
+      updatedAt: null,
+      animate: false
     }
   }
+
   componentDidMount() {
+
     this.getData = () => {
       const { data } = this.props;
       const url = 'https://api.coindesk.com/v1/bpi/currentprice.json';
-
+      
       fetch(url)
         .then(res => res.json())
         .then((coinData) => {
@@ -31,14 +37,28 @@ class Infobox extends Component {
             currentPrice: coinData.bpi.USD.rate_float,
             monthChangeD: change.toLocaleString('us-EN', { style: 'currency', currency: 'USD'}),
             monthChangeP: changeP.toFixed(2) + '%',
-            updatedAt: coinData.time.updated
+            updatedAt: coinData.time.updated,
+            animate: true
           })
         })
         .catch(e => console.error(`Error ${e}`));
     }
     this.getData();
-    this.refresh = setInterval(() => this.getData(), 90000);
+    this.refresh = setInterval(() => this.getData(), 30000);
   }
+
+  componentWillUpdate() {
+    ReactDOM.findDOMNode(this).classList.add("currentPrice");
+  }
+
+  componentDidUpdate(){
+    let el = ReactDOM.findDOMNode(this);
+    setTimeout(function () {
+      el.classList.remove("currentPrice");
+    }, 1000);
+  }
+
+
   render() {
     return(<div id="data-container">
       { this.state.currentPrice ? 

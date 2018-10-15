@@ -18,14 +18,16 @@
   margin-right: 48px;
 }
 
-
-
 .box {
   width: 250px;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 10px 0;
+}
+
+.currentPrice .box:nth-child(1) {
+  animation: flash 1s;
 }
 
 .heading {
@@ -35,4 +37,30 @@
 
 .subtext {
   color: #cccccc;
+}
+
+@-webkit-keyframes flash {
+  from,
+  50%,
+  to {
+    opacity: 1;
+  }
+
+  25%,
+  75% {
+    opacity: 0;
+  }
+}
+
+@keyframes flash {
+  from,
+  50%,
+  to {
+    opacity: 1;
+  }
+
+  25%,
+  75% {
+    opacity: 0;
+  }
 }
