@@ -11,8 +11,7 @@ class Infobox extends Component {
       currentPrice: null,
       monthChangeD: null,
       monthChangeP: null,
-      updatedAt: null,
-      animate: false
+      updatedAt: null
     }
   }
 
@@ -37,14 +36,13 @@ class Infobox extends Component {
             currentPrice: coinData.bpi.USD.rate_float,
             monthChangeD: change.toLocaleString('us-EN', { style: 'currency', currency: 'USD'}),
             monthChangeP: changeP.toFixed(2) + '%',
-            updatedAt: coinData.time.updated,
-            animate: true
+            updatedAt: coinData.time.updated
           })
         })
         .catch(e => console.error(`Error ${e}`));
     }
     this.getData();
-    this.refresh = setInterval(() => this.getData(), 30000);
+    this.refresh = setInterval(() => this.getData(), 90000);
   }
 
   componentWillUpdate() {
