@@ -1,6 +1,8 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'; 
+import ReactDOM from 'react-dom';
 import moment from 'moment';
-import './styles/scss/infobox.scss';
+
+import './infobox.css';
 
 class Infobox extends Component {
   constructor(props) {
@@ -12,11 +14,13 @@ class Infobox extends Component {
       updatedAt: null
     }
   }
+
   componentDidMount() {
+
     this.getData = () => {
       const { data } = this.props;
       const url = 'https://api.coindesk.com/v1/bpi/currentprice.json';
-
+      
       fetch(url)
         .then(res => res.json())
         .then((coinData) => {
@@ -35,6 +39,19 @@ class Infobox extends Component {
     this.getData();
     this.refresh = setInterval(() => this.getData(), 90000);
   }
+
+  componentWillUpdate() {
+    ReactDOM.findDOMNode(this).classList.add("currentPrice");
+  }
+
+  componentDidUpdate(){
+    let el = ReactDOM.findDOMNode(this);
+    setTimeout(function () {
+      el.classList.remove("currentPrice");
+    }, 1000);
+  }
+
+
   render() {
     return(<div id="data-container">
       { this.state.currentPrice ?
