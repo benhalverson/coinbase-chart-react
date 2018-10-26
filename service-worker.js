@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.2/workbox-sw.js");
 
 importScripts(
-  "/coinbase-chart-react/precache-manifest.2b72e077c7e4c749486fc544797bd100.js"
+  "/coinbase-chart-react/precache-manifest.29c016f334a3b456eb64f91d00dda4c0.js"
 );
 
 workbox.clientsClaim();

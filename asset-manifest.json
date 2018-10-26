@@ -1,13 +1,13 @@
 {
-  "main.css": "/coinbase-chart-react/static/css/main.2f4003d4.chunk.css",
-  "main.js": "/coinbase-chart-react/static/js/main.a2c8ce3b.chunk.js",
-  "main.js.map": "/coinbase-chart-react/static/js/main.a2c8ce3b.chunk.js.map",
-  "static/js/1.099774b8.chunk.js": "/coinbase-chart-react/static/js/1.099774b8.chunk.js",
-  "static/js/1.099774b8.chunk.js.map": "/coinbase-chart-react/static/js/1.099774b8.chunk.js.map",
+  "main.css": "/coinbase-chart-react/static/css/main.f593e6bb.chunk.css",
+  "main.js": "/coinbase-chart-react/static/js/main.b7f42084.chunk.js",
+  "main.js.map": "/coinbase-chart-react/static/js/main.b7f42084.chunk.js.map",
+  "static/js/1.ba580225.chunk.js": "/coinbase-chart-react/static/js/1.ba580225.chunk.js",
+  "static/js/1.ba580225.chunk.js.map": "/coinbase-chart-react/static/js/1.ba580225.chunk.js.map",
   "runtime~main.js": "/coinbase-chart-react/static/js/runtime~main.65065f21.js",
   "runtime~main.js.map": "/coinbase-chart-react/static/js/runtime~main.65065f21.js.map",
-  "static/css/main.2f4003d4.chunk.css.map": "/coinbase-chart-react/static/css/main.2f4003d4.chunk.css.map",
+  "static/css/main.f593e6bb.chunk.css.map": "/coinbase-chart-react/static/css/main.f593e6bb.chunk.css.map",
   "index.html": "/coinbase-chart-react/index.html",
-  "precache-manifest.2b72e077c7e4c749486fc544797bd100.js": "/coinbase-chart-react/precache-manifest.2b72e077c7e4c749486fc544797bd100.js",
+  "precache-manifest.29c016f334a3b456eb64f91d00dda4c0.js": "/coinbase-chart-react/precache-manifest.29c016f334a3b456eb64f91d00dda4c0.js",
   "service-worker.js": "/coinbase-chart-react/service-worker.js"
 }
