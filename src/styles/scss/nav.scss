@@ -1,0 +1,17 @@
+@import '_variables.scss';
+
+.nav-container {
+  width: 100%;
+  padding: 20px 0;
+  text-align: center;
+  a {
+    font-size: 18px;
+    text-decoration: none;
+    color: $coal;
+    margin: 10px;
+    padding-bottom: 3px;
+  }
+  a:hover {
+    border-bottom: 2px solid $coal;
+  }
+}
