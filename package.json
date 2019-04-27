@@ -6,9 +6,9 @@
     "gh-pages": "2.0.1",
     "moment": "2.22.2",
     "node-sass": "4.9.4",
-    "react": "^16.5.2",
-    "react-dom": "^16.5.2",
-    "react-router-dom": "^4.3.1",
+    "react": "16.5.2",
+    "react-dom": "16.5.2",
+    "react-router-dom": "4.3.1",
     "react-scripts": "2.0.4"
   },
   "scripts": {
@@ -30,7 +30,7 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "enzyme": "^3.7.0",
-    "enzyme-adapter-react-16": "^1.6.0"
+    "enzyme": "3.9.0",
+    "enzyme-adapter-react-16": "1.12.1"
   }
 }
