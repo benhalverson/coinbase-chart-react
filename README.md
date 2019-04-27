@@ -1,1 +1,1 @@
-Demo link is here [Demo](https://benhalverson.github.io/coinbase-chart-react/)
+Demo link is here [Demo](https://coinbase-demo.netlify.com/)
